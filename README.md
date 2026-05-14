@@ -99,31 +99,25 @@ JalSanchayTracker/
 
 ---
 
-# 📸 Screenshots
+<h2>📸 Screenshots</h2>
 
-## Splash Screen
+<h3>Splash Screen</h3>
+<img src="screenshots/Home_Screen.jpeg" width="250"/>
 
-![Splash Screen](screenshots/Home_Screen.jpeg)
+<h3>Setup Screen</h3>
+<img src="screenshots/Setup_screen.jpeg" width="250"/>
 
-## Setup / Input Screen
+<h3>Dashboard Screen</h3>
+<img src="screenshots/dashboard_screen.jpeg" width="250"/>
 
-![Setup Screen](screenshots/Setup_screen.jpeg)
+<h3>Reports Screen</h3>
+<img src="screenshots/reports_screen.jpeg" width="250"/>
 
-## Dashboard Screen
+<h3>Knowledge Hub / Tips Screen</h3>
+<img src="screenshots/tips_screen.jpeg" width="250"/>
 
-![Dashboard Screen](screenshots/dashboard_screen.jpeg)
-
-## Reports Screen
-
-![Reports Screen](screenshots/reports_screen.jpeg)
-
-## Knowledge Hub / Tips Screen
-
-![Tips Screen](screenshots/tips_screen.jpeg)
-
-## Tank Progress Visualization
-
-![Tank Visualization](screenshots/tank_visualization.jpeg)
+<h3>Tank Progress Visualization</h3>
+<img src="screenshots/tank_visualization.jpeg" width="250"/>
 
 ---
 
@@ -245,9 +239,9 @@ The application was tested on:
 # 👩‍💻 Developed By
 
 **Suraksha**  
-Final Year Computer Science Cyber Security Engineering Student  
-VTU Internship 2026
-ACS College of Engineering 
+Final Year Computer Science Cyber Security Engineering Student  <br>
+VTU Internship 2026 <br>
+ACS College of Engineering  <br>
 📩 Email: [surakshaganesh2827@gmail.com](mailto:surakshaganesh2827@gmail.com)
 
 ---
