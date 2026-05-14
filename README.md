@@ -104,37 +104,37 @@ JalSanchayTracker/
 ## Splash Screen
 
 ```md
-![Splash Screen](screenshots/Home_Screen.png)
+![Splash Screen](screenshots/Home_Screen.jpeg)
 ```
 
 ## Setup / Input Screen
 
 ```md
-![Setup Screen](screenshots/Setup_screen.png)
+![Setup Screen](screenshots/Setup_screen.jpeg)
 ```
 
 ## Dashboard Screen
 
 ```md
-![Dashboard Screen](screenshots/dashboard_screen.png)
+![Dashboard Screen](screenshots/dashboard_screen.jpeg)
 ```
 
 ## Reports Screen
 
 ```md
-![Reports Screen](screenshots/reports_screen.png)
+![Reports Screen](screenshots/reports_screen.jpeg)
 ```
 
 ## Knowledge Hub / Tips Screen
 
 ```md
-![Tips Screen](screenshots/tips_screen.png)
+![Tips Screen](screenshots/tips_screen.jpeg)
 ```
 
 ## Tank Progress Visualization
 
 ```md
-![Tank Visualization](screenshots/tank_visualization.png)
+![Tank Visualization](screenshots/tank_visualization.jpeg)
 ```
 
 ---
@@ -256,9 +256,11 @@ The application was tested on:
 
 # 👩‍💻 Developed By
 
-**Suraksha Ganesh**  
-Final Year Computer Science & Cyber Security Student  
+**Suraksha**  
+Final Year Computer Science Cyber Security Engineering Student  
 VTU Internship 2026
+ACS College of Engineering 
+📩 Email: [surakshaganesh2827@gmail.com](mailto:surakshaganesh2827@gmail.com)
 
 ---
 
