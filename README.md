@@ -1,109 +1,277 @@
-# 💧 Jal-Sanchay Tracker
+# JalSanchay Tracker 🌧️💧
 
-**Android App for Rainwater Harvesting Tracking**  
-MindMatrix VTU Internship Program — Project Title #86
+An Android application developed as part of the **VTU Internship 2026 – Android App Development using Generative AI**.
 
----
+JalSanchay Tracker helps users measure and visualize rainwater harvesting effectiveness by calculating water savings based on roof area, rainfall, and roof type.
 
-## 📱 Features
-
-| Screen | Description |
-|--------|-------------|
-| Welcome | Animated splash with water drop |
-| Setup | Roof area, tank capacity, rooftop type selection |
-| Dashboard | Animated water tank with wave, stats, quick actions |
-| Data Entry | Log rainfall, live liter calculation preview |
-| Alerts | 4-level alert system (Normal/Stable/Warning/Overflow) |
-| Impact | Convert liters → days, showers, flushes, CO₂ |
-| Reports | Tabular log + bar chart of last 7 entries |
-| Knowledge Hub | 13 filterable water harvesting tips |
-| Gamification | 6 badge achievements with unlock tracking |
+The application promotes **water conservation awareness**, sustainable living, and household-level rainwater management through an interactive and user-friendly Android interface.
 
 ---
 
-## 🏗️ Architecture
+# 📱 Features
 
-```
-com.jalsanchay.tracker/
-├── MainActivity.kt
-├── model/
-│   └── Models.kt          (AppState, RainfallEntry, Badge, AlertLevel)
-├── viewmodel/
-│   └── JalSanchayViewModel.kt  (ViewModel with StateFlow)
-├── navigation/
-│   └── NavGraph.kt        (NavHost with all routes)
-└── ui/
-    ├── theme/
-    │   └── Theme.kt       (Water-inspired color palette)
-    ├── components/
-    │   └── SharedComponents.kt (JalTopBar, InfoCard, GradientBackground)
-    └── screens/
-        ├── WelcomeScreen.kt
-        ├── SetupScreen.kt
-        ├── DashboardScreen.kt  (animated Canvas water tank)
-        ├── DataEntryScreen.kt
-        ├── AlertsScreen.kt
-        ├── ImpactScreen.kt
-        ├── ReportsScreen.kt
-        ├── KnowledgeHubScreen.kt
-        └── GamificationScreen.kt
+- 🌧️ Rainfall logging and water harvesting calculation
+- 🏠 Roof type selection with runoff coefficient logic
+- 💧 Water tank visual progress indicator
+- 📊 Dashboard showing:
+  - Liters Saved Today
+  - Total Water Savings
+  - Impact Score (Household Water Days)
+- 🗂️ Monthly reports using Room Database
+- 📚 Water conservation tips section
+- 🎮 Interactive and user-friendly UI
+- 📱 Optimized for Android devices
+- ⚡ Real-time calculation updates
+- 🧠 Input validation for incorrect/non-numeric values
+
+---
+
+# 🧮 Formula Used
+
+The application calculates harvested rainwater using:
+
+```text
+Water Harvested = Roof Area × Rainfall × 0.0929 × Runoff Coefficient
 ```
 
----
-
-## 🚀 Setup in Android Studio 2025.3.1
-
-1. **Open Android Studio** → File → New → Import Project
-2. Select the `JalSanchayTracker` folder
-3. Wait for Gradle sync to complete
-4. Run on emulator (API 24+) or physical device
-
-### Requirements
-- Android Studio 2025.3.1 (Meerkat)
-- Kotlin 2.0.21
-- compileSdk 35, minSdk 24
-- Jetpack Compose BOM 2024.12.01
+Where:
+- Roof Area → in square feet
+- Rainfall → in millimeters
+- 0.0929 → sq.ft to sq.m conversion factor
+- Runoff Coefficient → based on roof type
 
 ---
 
-## 💧 Water Calculation Formula
+# 🏠 Roof Types Supported
 
+| Roof Type | Runoff Coefficient |
+|---|---|
+| Concrete Roof | 0.85 |
+| Metal Roof | 0.90 |
+| Tile Roof | 0.75 |
+| Asphalt Roof | 0.80 |
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- Kotlin
+- Jetpack Compose / XML Layouts
+- Material Design Components
+
+## Backend / Storage
+- Room Database
+- SharedPreferences
+
+## Development Tools
+- Android Studio
+- Gradle
+- GitHub
+
+---
+
+# 📂 Project Structure
+
+```text
+JalSanchayTracker/
+│
+├── app/
+│   ├── src/main/java/
+│   │   ├── activities/
+│   │   ├── database/
+│   │   ├── ui/
+│   │   ├── utils/
+│   │   └── adapters/
+│   │
+│   ├── res/
+│   │   ├── layout/
+│   │   ├── drawable/
+│   │   ├── values/
+│   │   └── mipmap/
+│   │
+│   └── AndroidManifest.xml
+│
+├── screenshots/
+├── README.md
+└── build.gradle
 ```
-Liters = Roof Area (sq ft) × Rainfall (mm) × 0.0929 × 0.85
+
+---
+
+# 📸 Screenshots
+
+## Splash Screen
+
+```md
+![Splash Screen](screenshots/Home_Screen.png)
 ```
 
-- `0.0929` → converts sq ft to sq meters
-- `0.85` → runoff coefficient (15% loss to evaporation/absorption)
+## Setup / Input Screen
+
+```md
+![Setup Screen](screenshots/Setup_screen.png)
+```
+
+## Dashboard Screen
+
+```md
+![Dashboard Screen](screenshots/dashboard_screen.png)
+```
+
+## Reports Screen
+
+```md
+![Reports Screen](screenshots/reports_screen.png)
+```
+
+## Knowledge Hub / Tips Screen
+
+```md
+![Tips Screen](screenshots/tips_screen.png)
+```
+
+## Tank Progress Visualization
+
+```md
+![Tank Visualization](screenshots/tank_visualization.png)
+```
 
 ---
 
-## 🎨 Color Scheme
+# 🗄️ Room Database
 
-| Level | % Fill | Color |
-|-------|--------|-------|
-| Normal | < 50% | Blue |
-| Stable | ≥ 50% | Yellow |
-| Warning | ≥ 80% | Orange |
-| Overflow | 100% | Red |
+The application uses **Room Database** to store:
 
----
+- Rainfall history
+- Water calculation history
+- Monthly reports
+- Saved water records
 
-## 🏆 Badge System
+## Database Features
 
-| Badge | Unlock Condition |
-|-------|-----------------|
-| First Drop | Log 1 entry |
-| Water Warrior | Save 100L |
-| Hydro Hero | Save 500L |
-| Rain Master | 10 entries |
-| Conservationist | Save 1000L |
-| Full Tank | 100% tank fill |
+- Offline storage
+- Fast local data access
+- Monthly history tracking
+- Report generation
 
 ---
 
-## 📦 Dependencies (from libs.versions.toml)
+# 📊 Dashboard Features
 
-- `androidx.navigation:navigation-compose:2.8.5`
-- `androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7`
-- `androidx.compose.material:material-icons-extended`
-- Standard Compose BOM 2024.12.01
+The dashboard provides:
+
+- Current rainfall data
+- Water saved calculation
+- Total accumulated savings
+- Tank fill percentage
+- Household water impact score
+
+---
+
+# 📈 Monthly Reports
+
+Users can track:
+- Daily water collection
+- Monthly total savings
+- Historical rainfall entries
+- Water conservation trends
+
+---
+
+# 📚 Knowledge Hub
+
+The application includes educational content related to:
+- Rainwater harvesting
+- Water conservation methods
+- Sustainable household practices
+- Efficient water usage tips
+
+---
+
+# 🎯 Objectives
+
+- Promote sustainable water management
+- Create awareness about rainwater harvesting
+- Help households measure water conservation impact
+- Encourage eco-friendly practices using technology
+
+---
+
+# ⚙️ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/your-username/JalSanchayTracker.git
+```
+
+## Open in Android Studio
+
+1. Open Android Studio
+2. Select **Open Existing Project**
+3. Choose the project folder
+4. Sync Gradle files
+5. Run the application
+
+---
+
+# ▶️ Running the App
+
+- Connect Android device or emulator
+- Click **Run ▶**
+- Launch the application
+
+---
+
+# ✅ Requirements
+
+- Android Studio Hedgehog or above
+- Android SDK 24+
+- Kotlin support enabled
+- Gradle installed
+
+---
+
+# 🧪 Testing
+
+The application was tested on:
+- Android Emulator (Pixel)
+- Real Android Device
+- Different screen sizes
+- Offline and online scenarios
+
+---
+
+# 🚀 Future Enhancements
+
+- Firebase cloud sync
+- AI-based rainfall prediction
+- Weather API integration
+- Push notifications
+- Water usage analytics
+- Gamification and rewards
+
+---
+
+# 👩‍💻 Developed By
+
+**Suraksha Ganesh**  
+Final Year Computer Science & Cyber Security Student  
+VTU Internship 2026
+
+---
+
+# 📄 License
+
+This project is developed for educational and internship purposes under the VTU Internship Programme.
+
+---
+
+# ⭐ Acknowledgements
+
+- VTU Internship Programme
+- MindMatrix.io
+- Android Developers Documentation
+- Kotlin Documentation
+- Open-source Android community
