@@ -103,39 +103,27 @@ JalSanchayTracker/
 
 ## Splash Screen
 
-```md
 ![Splash Screen](screenshots/Home_Screen.jpeg)
-```
 
 ## Setup / Input Screen
 
-```md
 ![Setup Screen](screenshots/Setup_screen.jpeg)
-```
 
 ## Dashboard Screen
 
-```md
 ![Dashboard Screen](screenshots/dashboard_screen.jpeg)
-```
 
 ## Reports Screen
 
-```md
 ![Reports Screen](screenshots/reports_screen.jpeg)
-```
 
 ## Knowledge Hub / Tips Screen
 
-```md
 ![Tips Screen](screenshots/tips_screen.jpeg)
-```
 
 ## Tank Progress Visualization
 
-```md
 ![Tank Visualization](screenshots/tank_visualization.jpeg)
-```
 
 ---
 
